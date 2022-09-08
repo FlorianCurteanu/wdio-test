@@ -28,6 +28,7 @@ describe ('Login', () => {
 
     it('press logout and check message/URL', async () => {
         await $('a.button.secondary.radius').click();
+        await $('#login').waitForDisplayed();
         await expect($('#flash')).toHaveTextContaining(('You logged out of the secure area!'));
         await expect(browser).toHaveUrlContaining('login');
     })
