@@ -1,5 +1,3 @@
-const { renderConfigurationFile } = require("@wdio/cli/build/utils");
-
 describe ('LoginSwagLabs', () => {
     before(async () => {
         await browser.setWindowSize(1200, 800);
