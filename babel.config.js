@@ -1,3 +1,4 @@
+// allows uses of ES6 syntax (like import)
 module.exports = {
     "presets": [
         [

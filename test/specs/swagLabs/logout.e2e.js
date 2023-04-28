@@ -1,4 +1,4 @@
-describe ('LoginSwagLabs', () => {
+describe ('Logout', () => {
     let menuItems;
 
     before(async () => {
@@ -50,7 +50,7 @@ describe ('LoginSwagLabs', () => {
 
     it('should logout', async () => {
         await menuItems[2].waitForClickable();
-        await expect(menuItems[2]).toHaveText('LOGOUT');
+        await expect(menuItems[2]).toHaveText('Logout');
         await menuItems[2].click();
     });
 

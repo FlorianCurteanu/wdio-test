@@ -1,4 +1,4 @@
-describe('Login Errors', () => {
+describe('Login Errors Test', () => {
     it('should open the page', async () => {
         await browser.url('https://the-internet.herokuapp.com/login');
         await $('#login').waitForDisplayed();
@@ -10,5 +10,4 @@ describe('Login Errors', () => {
         await expect($('.flash.error')).toHaveTextContaining('Your username is invalid!');
     });
 
-//todo click on login button and check error message
 });
