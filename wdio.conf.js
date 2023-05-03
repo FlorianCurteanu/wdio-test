@@ -21,7 +21,7 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/orangeHRM/employeeTimesheet.e2e.js'
+        './test/specs/swagLabs/sanityProducts.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [

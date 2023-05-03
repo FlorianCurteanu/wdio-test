@@ -1,4 +1,4 @@
-class Cart {
+class cart {
     constructor() {
         this.mainSelector = '#cart_contents_container';
     }
@@ -53,4 +53,4 @@ class Cart {
 
 }
 
-export default new Cart();
+export default new cart();

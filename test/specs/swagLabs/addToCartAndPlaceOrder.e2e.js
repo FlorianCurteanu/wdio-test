@@ -2,10 +2,10 @@ import login from '../../pageobjects/swagLabs/login';
 import header from '../../pageobjects/swagLabs/header';
 import footer from '../../pageobjects/swagLabs/footer';
 import inventory from '../../pageobjects/swagLabs/inventory';
-import cart from '../../pageobjects/swagLabs/addToCartAndPlaceOrder/cart';
-import checkout from '../../pageobjects/swagLabs/addToCartAndPlaceOrder/checkout';
-import checkoutOverview from '../../pageobjects/swagLabs/addToCartAndPlaceOrder/checkoutOverview';
-import checkoutComplete from '../../pageobjects/swagLabs/addToCartAndPlaceOrder/checkoutComplete';
+import cart from '../../pageobjects/swagLabs/cart';
+import checkout from '../../pageobjects/swagLabs/checkout';
+import checkoutOverview from '../../pageobjects/swagLabs/checkoutOverview';
+import checkoutComplete from '../../pageobjects/swagLabs/checkoutComplete';
 
 describe ('Add To Cart And Place Order', () => {
     let price1, price2, price3;

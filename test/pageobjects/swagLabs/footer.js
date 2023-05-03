@@ -1,4 +1,4 @@
-class Footer {
+class footer {
     constructor() {
         this.mainSelector = '.footer';
     }
@@ -21,4 +21,4 @@ class Footer {
 
 }
 
-export default new Footer();
+export default new footer();

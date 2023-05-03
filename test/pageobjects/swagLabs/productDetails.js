@@ -1,4 +1,4 @@
-class pUproductDetails {
+class productDetails {
     constructor() {
         this.mainSelector = '#root #page_wrapper #contents_wrapper';
     }
@@ -49,4 +49,4 @@ class pUproductDetails {
 
 }
 
-export default new pUproductDetails();
+export default new productDetails();

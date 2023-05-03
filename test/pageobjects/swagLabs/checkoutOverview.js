@@ -1,4 +1,4 @@
-class CheckoutOverview {
+class checkoutOverview {
     constructor() {
         this.mainSelector = '#checkout_summary_container';
     }
@@ -49,4 +49,4 @@ class CheckoutOverview {
 
 }
 
-export default new CheckoutOverview();
+export default new checkoutOverview();

@@ -27,7 +27,7 @@ describe ('Employee Timesheet', () => {
     it ('should select an employee name from dropdown list', async () => {
         await timePage.container.waitForDisplayed();
         await timePage.employeeNameContainer.addValue('Anderson');
-        await expect(timePage.autocompleteOptions).toBeElementsArrayOfSize(2);
+        await expect(timePage.autocompleteOptions).toBeElementsArrayOfSize(3);
         await timePage.getAutocompleteOptionByName('Linda Jane Anderson').click();
     });
 
@@ -38,7 +38,7 @@ describe ('Employee Timesheet', () => {
 
     it ('should click on Edit Button', async () => {
         await timesheetsPage.editButton.click();
-        await expect(timesheetsPage.timesheetForLindaAnderson).toHaveText('Timesheet for Linda Anderson');
+        await expect(timesheetsPage.timesheetForLindaAnderson).toHaveText('Edit Timesheet for Linda Anderson');
         await timesheetsPage.timesheetTable.waitForDisplayed();
         await timesheetsPage.trashButton.click();
     });

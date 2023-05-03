@@ -1,4 +1,4 @@
-import LoginPage from '../../pageobjects/swagLabs/login';
+import loginPage from '../../pageobjects/swagLabs/login';
 
 describe ('Locked Out User', () => {
 
@@ -8,18 +8,18 @@ describe ('Locked Out User', () => {
 
     it ('should open page', async () => {
         await browser.url('https://www.saucedemo.com/');
-        await LoginPage.loginContainer.waitForDisplayed();
+        await loginPage.loginContainer.waitForDisplayed();
     });
 
     it ('should display error message after click Login', async () => {
-        await LoginPage.login ('locked_out_user', 'secret_sauce');
-        await LoginPage.errorContainer.waitForDisplayed();
+        await loginPage.login ('locked_out_user', 'secret_sauce');
+        await loginPage.errorContainer.waitForDisplayed();
     });
 
     it ('should check error message and close the error container', async () => {
-        await expect(LoginPage.errorContainer).toHaveText('Epic sadface: Sorry, this user has been locked out.');
-        await LoginPage.errorButton.click();
-        await LoginPage.errorMessage.waitForDisplayed({reverse: true});
+        await expect(loginPage.errorContainer).toHaveText('Epic sadface: Sorry, this user has been locked out.');
+        await loginPage.errorButton.click();
+        await loginPage.errorMessage.waitForDisplayed({reverse: true});
     });
 
 });

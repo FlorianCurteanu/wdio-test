@@ -1,4 +1,4 @@
-class CheckoutComplete {
+class checkoutComplete {
     constructor() {
         this.mainSelector = '#contents_wrapper #checkout_complete_container';
     }
@@ -29,4 +29,4 @@ class CheckoutComplete {
 
 }
 
-export default new CheckoutComplete();
+export default new checkoutComplete();

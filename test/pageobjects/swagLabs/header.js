@@ -1,4 +1,4 @@
-class Header {
+class header {
     constructor() {
         this.mainSelector = '#header_container';
     }
@@ -33,4 +33,4 @@ class Header {
 
 }
 
-export default new Header();
+export default new header();

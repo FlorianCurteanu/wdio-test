@@ -1,4 +1,4 @@
-class LoginPage {
+class loginPage {
     constructor() {
         this.mainSelector = '.login_wrapper';
     }
@@ -54,4 +54,4 @@ class LoginPage {
     }
 }
 
-export default new LoginPage();
+export default new loginPage();

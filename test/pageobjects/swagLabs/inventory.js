@@ -1,4 +1,4 @@
-class Inventory {
+class inventory {
     constructor() {
         this.mainSelector = '#inventory_container #inventory_container';
     }
@@ -42,4 +42,4 @@ class Inventory {
 
 }
 
-export default new Inventory();
+export default new inventory();
