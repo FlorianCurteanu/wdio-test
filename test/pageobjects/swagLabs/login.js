@@ -23,10 +23,6 @@ class loginPage {
         return this.loginContainer.$('.login-box');
     }
 
-    // get robotImage () {
-    //     return this.loginContainer.$('.bot_column');
-    // }
-
     get loginCredentials () {
         return this.loginContainer.$('#login_credentials');
     }
