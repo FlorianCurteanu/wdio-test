@@ -3,7 +3,7 @@ import dashboardPage from '../../pageobjects/orangeHRM/dashboardPage';
 import PIMpage from '../../pageobjects/orangeHRM/PIM/PIMpage';
 import personalDetails from '../../pageobjects/orangeHRM/PIM/personalDetailsPage';
 
-describe ('Employee Management', () => {
+describe ('Create Employee Personal File', () => {
 
     before(async () => {
         await browser.setWindowSize(1600, 1000);
