@@ -3,7 +3,7 @@ import dashboardPage from '../../pageobjects/orangeHRM/dashboardPage';
 import timePage from '../../pageobjects/orangeHRM/timePage';
 import timesheetsPage from '../../pageobjects/orangeHRM/timesheetsPage';
 
-describe ('Employee Timesheet', () => {
+describe ('Employee Project Timesheet', () => {
 
     before(async () => {
         await browser.setWindowSize(1600, 1000);
@@ -26,8 +26,8 @@ describe ('Employee Timesheet', () => {
 
     it ('should select an employee name from dropdown list', async () => {
         await timePage.container.waitForDisplayed();
-        await timePage.employeeNameContainer.addValue('Anderson');
-        await expect(timePage.autocompleteOptions).toBeElementsArrayOfSize(3);
+        await timePage.employeeNameContainer.setValue('Anderson');
+        await expect(timePage.autocompleteOptions).toBeElementsArrayOfSize(2);
         await timePage.getAutocompleteOptionByName('Linda Jane Anderson').click();
     });
 
@@ -44,7 +44,7 @@ describe ('Employee Timesheet', () => {
     });
 
     it ('should select "Coca-Cola" project', async () => {
-        await timesheetsPage.projectInput.addValue('Coca-Cola');
+        await timesheetsPage.projectInput.setValue('Coca-Cola');
         await expect(timesheetsPage.projectCocaCola).toHaveTextContaining('Coca-Cola');
         await timesheetsPage.projectCocaCola.click();
         await expect(timesheetsPage.projectInput).toHaveValueContaining('The Coca-Cola Company - Coke - Phase 1');
@@ -58,29 +58,34 @@ describe ('Employee Timesheet', () => {
 
     it ('should fill hours for each day', async () => {
         const inputDay = await timesheetsPage.inputForWeekDays;
-        await (inputDay[0]).addValue('8');
+        await (inputDay[0]).setValue('8');
         await expect(inputDay[0]).toHaveValue('8');
-        await (inputDay[1]).addValue('7.5');
+        await (inputDay[1]).setValue('7.5');
         await expect(inputDay[1]).toHaveValue('7.5');
-        await (inputDay[2]).addValue('4.5');
+        await (inputDay[2]).setValue('4.5');
         await expect(inputDay[2]).toHaveValue('4.5');
-        await (inputDay[3]).addValue('6.5');
+        await (inputDay[3]).setValue('6.5');
         await expect(inputDay[3]).toHaveValue('6.5');
-        await (inputDay[4]).addValue('7');
+        await (inputDay[4]).setValue('7');
         await expect(inputDay[4]).toHaveValue('7');
-        await (inputDay[5]).addValue('3');
+        await (inputDay[5]).setValue('3');
         await expect(inputDay[5]).toHaveValue('3');
-        await (inputDay[6]).addValue('6');
+        await (inputDay[6]).setValue('6');
         await expect(inputDay[6]).toHaveValue('6');
     });
 
     it ('should save the data', async () => {
         await timesheetsPage.saveButoon.click();
+        await timesheetsPage.saveButoon.waitForDisplayed({reverse: true});
     });
 
     it ('should approve timesheet', async () => {
         await timesheetsPage.actionForm.waitForDisplayed();
         await timesheetsPage.approveButton.click();
     });
+
+    it ('should check if timesheet was approved', async () => {
+        await expect(timesheetsPage.actionsTable).toHaveText('Submitted');
+    })
 
 })

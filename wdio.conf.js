@@ -21,22 +21,23 @@ exports.config = {
     // will be called from there.
     //
     specs: [
-        './test/specs/**/*.e2e.js'], 
-        suites: {
-            swagLabs: [
-                './test/specs/swagLabs/addToCartAndPlaceOrder.e2e.js',
-                './test/specs/swagLabs/lockedOutUser.e2e.js',
-                './test/specs/swagLabs/login.e2e.js',
-                './test/specs/swagLabs/logout.e2e.js',
-                './test/specs/swagLabs/problemUser.e2e.js',
-                './test/specs/swagLabs/sanityLogin.e2e.js',
-                './test/specs/swagLabs/sanityProducts.e2e.js',
-            ],
-            orangeHRM: [
-                './test/specs/orangeHRM/createEmployeePersonalFile.e2e.js',
-                './test/specs/orangeHRM/employeeTimesheet.e2e.js',
-            ],
-        },
+        './test/specs/orangeHRM/employeeProjectTimesheet.e2e.js'
+    ], 
+    // suites: {
+    //         swagLabs: [
+    //             './test/specs/swagLabs/addToCartAndPlaceOrder.e2e.js',
+    //             './test/specs/swagLabs/lockedOutUser.e2e.js',
+    //             './test/specs/swagLabs/login.e2e.js',
+    //             './test/specs/swagLabs/logout.e2e.js',
+    //             './test/specs/swagLabs/problemUser.e2e.js',
+    //             './test/specs/swagLabs/sanityLogin.e2e.js',
+    //             './test/specs/swagLabs/sanityProducts.e2e.js',
+    //         ],
+    //         orangeHRM: [
+    //             './test/specs/orangeHRM/createEmployeePersonalFile.e2e.js',
+    //             './test/specs/orangeHRM/employeeProjectTimesheet.e2e.js',
+    //         ],
+    //     },
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'

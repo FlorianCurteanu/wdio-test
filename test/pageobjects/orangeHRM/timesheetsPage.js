@@ -79,6 +79,10 @@ class timesheetsPage {
         return this.container.$('.oxd-icon-button.orangehrm-timesheet-icon .oxd-icon.bi-trash');
     }
 
+    get actionsTable() {
+        return this.container.$('.oxd-table-cell');
+    }
+
 }
 
 export default new timesheetsPage();
